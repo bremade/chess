@@ -1,0 +1,37 @@
+{
+  "name": "chess",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public",
+    "lint": "eslint --fix --ext .svelte,.js src"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.17",
+    "@babel/preset-env": "^7.12.17",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-eslint": "^8.0.1",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@sveltejs/eslint-config": "github:sveltejs/eslint-config",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-svelte3": "^3.1.1",
+    "postcss": "^8.2.6",
+    "rollup": "^2.3.4",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "sass": "^1.32.8",
+    "svelte": "^3.0.0",
+    "svelte-preprocess": "^4.6.9",
+    "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "sirv-cli": "^1.0.0"
+  }
+}
