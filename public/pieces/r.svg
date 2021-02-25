@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   viewBox="0 0 504 504"
+   version="1.0"
+   sodipodi:docname="r.svg"
+   width="504"
+   height="504"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <defs
+     id="defs1327">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1331">
+      <rect
+         id="rect1333"
+         width="504"
+         height="504"
+         x="504"
+         y="0" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2558"
+     inkscape:window-height="1414"
+     id="namedview1325"
+     showgrid="false"
+     inkscape:zoom="2.1830519"
+     inkscape:cx="247.59141"
+     inkscape:cy="229.28916"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <g
+     id="layer1"
+     clip-path="url(#clipPath1331)"
+     transform="translate(-479)">
+    <g
+       id="g2399"
+       transform="translate(-43.916,-225.65)">
+      <path
+         id="path2406"
+         style="fill:#000000"
+         d="M 90,422.5 V 404 h 12.5 12.5 v -21.35 -21.36 l 21,-22.36 21,-22.36 V 242.01 167.45 L 132.56,148.98 108.11,130.5 108.06,96.75 108,63 h 28.5 28.5 v 15 15 h 26 26 V 78 63 h 35 35 v 15 15 h 26 26 V 78 63 H 367.5 396 L 395.95,96.75 395.9,130.5 371.45,149 347,167.5 v 74.7 74.69 l 20.97,22.31 20.97,22.3 0.03,21.25 L 389,404 H 401.5 414 V 422.5 441 H 252 90 Z"
+         transform="translate(523.71,225.65)"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2392"
+         style="fill:#ffffff"
+         d="m 387.55,134.55 c 1.35,-1.35 2.45,-3.62 2.45,-5.05 0,-1.42 -1.1,-3.7 -2.45,-5.05 L 385.09,122 H 252 118.91 l -2.46,2.45 c -1.35,1.35 -2.45,3.63 -2.45,5.05 0,1.42 1.1,3.7 2.45,5.05 l 2.46,2.45 H 252 385.09 Z"
+         transform="translate(523.71,225.65)"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2390"
+         style="fill:#ffffff"
+         d="m 337.55,172.55 c 1.35,-1.35 2.45,-3.62 2.45,-5.05 0,-1.42 -1.1,-3.7 -2.45,-5.05 L 335.09,160 H 252 168.91 l -2.46,2.45 c -1.35,1.35 -2.45,3.63 -2.45,5.05 0,1.42 1.1,3.7 2.45,5.05 l 2.46,2.45 H 252 335.09 Z"
+         transform="translate(523.71,225.65)"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2388"
+         style="fill:#ffffff"
+         d="m 337.55,321.55 c 1.35,-1.35 2.45,-3.62 2.45,-5.05 0,-1.42 -1.1,-3.7 -2.45,-5.05 L 335.09,309 H 252 168.91 l -2.46,2.45 c -1.35,1.35 -2.45,3.63 -2.45,5.05 0,1.43 1.1,3.7 2.45,5.05 l 2.46,2.45 H 252 335.09 Z"
+         transform="translate(523.71,225.65)"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2386"
+         style="fill:#ffffff"
+         d="m 379.09,367.72 c 4.34,-3.34 4.6,-8.07 0.64,-11.75 C 377.66,354.03 375.52,354 252,354 c -123.52,0 -125.66,0.03 -127.73,1.97 -3.96,3.68 -3.7,8.41 0.64,11.75 2.31,1.77 251.87,1.77 254.18,0 z"
+         transform="translate(523.71,225.65)"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2384"
+         style="fill:#ffffff"
+         d="m 379.09,409.72 c 4.34,-3.34 4.6,-8.07 0.64,-11.75 C 377.66,396.03 375.52,396 252,396 c -123.52,0 -125.66,0.03 -127.73,1.97 -3.96,3.68 -3.7,8.41 0.64,11.75 2.31,1.77 251.87,1.77 254.18,0 z"
+         transform="translate(523.71,225.65)"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g2423"
+       transform="translate(-521.92,-264.5)">
+      <path
+         id="path2449"
+         style="fill:#000000"
+         d="m 86.083,448.55 c -4.536,-2.48 -5.032,-5.43 -4.697,-27.94 l 0.309,-20.74 2.805,-2.42 c 2.537,-2.18 3.711,-2.41 12.25,-2.41 h 9.44 l 0.01,-17.75 c 0,-15.83 0.21,-18.07 1.93,-20.75 1.07,-1.65 10.5,-12 20.96,-23 l 19.04,-20 0.02,-71 0.03,-71 -23.54,-17.9 c -12.94,-9.84 -23.96,-18.7 -24.49,-19.68 -0.555,-1.04 -0.955,-16.48 -0.955,-36.902 0,-38.412 0.163,-39.598 5.765,-41.917 2.04,-0.846 11.59,-1.1 33.52,-0.891 37.97,0.362 35.06,-1.056 35.55,17.317 l 0.33,12.475 h 16.92 16.91 V 73.51 c 0,-12.228 1.34,-16.534 5.68,-18.331 2.14,-0.889 12.74,-1.133 40.09,-0.922 45.53,0.35 41.57,-1.279 42.07,17.31 l 0.33,12.475 h 16.92 16.91 V 72.993 c 0,-12.413 1.14,-15.936 5.77,-17.852 2.04,-0.846 11.59,-1.1 33.52,-0.891 30.39,0.29 30.68,0.313 32.94,2.569 2.27,2.275 2.27,2.309 2.56,38.871 0.24,30.24 0.04,36.96 -1.13,38.72 -0.78,1.17 -11.81,10.01 -24.53,19.63 l -23.11,17.5 v 71 l -0.01,71 20.11,21.48 c 11.06,11.82 20.51,22.53 21,23.82 0.49,1.28 0.88,9.91 0.88,19.17 v 16.84 l 9.98,0.35 c 15.12,0.52 14.52,-0.61 14.52,27.34 0,22.03 -0.04,22.49 -2.27,24.72 l -2.28,2.28 -164.72,0.22 c -140.94,0.18 -165.1,0.01 -167.34,-1.21 z"
+         transform="translate(554.82,264.5)"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2394"
+         style="fill:#ffffff"
+         d="m 387.19,96.542 v -24.5 h -19.41 -19.42 l -0.33,12.475 c -0.49,18.273 2.02,16.953 -33.04,17.323 -20.06,0.21 -28.99,-0.05 -31.03,-0.89 -4.63,-1.922 -5.77,-5.441 -5.77,-17.858 v -11.05 h -26 -26 v 11.945 c 0,11.182 -0.15,12.123 -2.41,14.75 l -2.41,2.803 -28.27,0.3 c -20.14,0.21 -29.1,-0.05 -31.14,-0.89 -4.63,-1.922 -5.77,-5.441 -5.77,-17.858 v -11.05 h -19.5 -19.5 v 24.5 24.498 h 135 135 z"
+         transform="translate(554.82,264.5)"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2427"
+         style="fill:#ffffff"
+         d="m 357.47,148.79 12.14,-9.25 -58.71,-0.26 c -32.29,-0.14 -85.1,-0.14 -117.35,0 l -58.64,0.26 11.89,9.2 11.89,9.2 93.32,0.05 93.32,0.05 z"
+         transform="translate(554.82,264.5)"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2429"
+         style="fill:#ffffff"
+         d="m 338.19,242.04 v -66 h -86 -86 v 66 66 h 86 86 z"
+         transform="translate(554.82,264.5)"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2431"
+         style="fill:#ffffff"
+         d="m 366.52,350.73 c -1.01,-1.27 -6.55,-7.35 -12.33,-13.5 l -10.5,-11.19 h -91.57 -91.58 l -12.75,13.5 -12.76,13.5 h 116.66 116.65 z"
+         transform="translate(554.82,264.5)"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2433"
+         style="fill:#ffffff"
+         d="m 380.19,383.04 v -12 h -128 -128 v 12 12 h 128 128 z"
+         transform="translate(554.82,264.5)"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2435"
+         style="fill:#ffffff"
+         d="m 405.19,422.54 v -9.5 h -153 -153 l 0.005,9.5 v 9.5 h 153 152.99 v -9.5 z"
+         transform="translate(554.82,264.5)"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+  <metadata
+     id="metadata1322">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title></dc:title>
+        <dc:date>2008-08-26T09:10:40</dc:date>
+        <dc:description>A light and dark (black and white) rook for use in chess board templates. Source: http://commons.wikimedia.org/wiki/Image:Chess_tile_rl.png http://commons.wikimedia.org/wiki/Image:Chess_tile_rd.png</dc:description>
+        <dc:source>https://openclipart.org/detail/18653/chess-tile---rook-by-portablejim</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>portablejim</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>black</rdf:li>
+            <rdf:li>chess</rdf:li>
+            <rdf:li>externalsource</rdf:li>
+            <rdf:li>game</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>rook</rdf:li>
+            <rdf:li>white</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
