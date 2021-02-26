@@ -35,8 +35,9 @@ export function parseFen(fen) {
   };
 }
 
-export function fromArray(boardArr) {
+export function fromStore(chessStore) {
   var fen = "";
+  var boardArr = chessStore.board;
   for (var row = 0; row < boardArr.length; row++) {
     var empty = 0;
     for (var col = 0; col < boardArr[row].length; col++) {
@@ -58,8 +59,14 @@ export function fromArray(boardArr) {
       fen += "/";
     }
   }
-  // TODO: add turn castlingFlags enPassant halfmoves, moveNumber
-  return [fen].join(" ");
+  return [
+    fen,
+    chessStore.turn,
+    chessStore.castling,
+    chessStore.enPassant,
+    chessStore.halfmove,
+    chessStore.fullmove,
+  ].join(" ");
 }
 
 export function fromFen(fen) {
@@ -78,7 +85,6 @@ export function fromFen(fen) {
         game[row][col] = null;
         col++;
       }
-      var tmp = parseInt(placements[i]);
     } else {
       game[row][col] = placements[i];
       col++;
