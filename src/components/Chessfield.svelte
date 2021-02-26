@@ -1,26 +1,16 @@
 <script>
   import { onMount } from "svelte";
+  import chessStore from "../engine/chessstore.js";
 
   import Cell from "./Cell.svelte";
   import Piece from "./Piece.svelte";
 
-  const rows = [0, 1, 2, 3, 4, 5, 6, 7];
-  const cols = [0, 1, 2, 3, 4, 5, 6, 7];
+  $: game = $chessStore.board;
+
   const ROW_LABELS = ["8", "7", "6", "5", "4", "3", "2", "1"];
   const COL_LABELS = ["A", "B", "C", "D", "E", "F", "G", "H"];
-  const startPosition =
-    "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+
   let gameSize = 0;
-  let game = [
-    ["r", "n", "b", "q", "k", "b", "n", "r"],
-    ["p", "p", "p", "p", "p", "p", "p", "p"],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    ["P", "P", "P", "P", "P", "P", "P", "P"],
-    ["R", "N", "B", "Q", "K", "B", "N", "R"],
-  ];
 
   onMount(() => getGameSize(window.innerWidth, window.innerHeight));
 
@@ -34,7 +24,6 @@
     } else {
       gameSize = height - 200;
     }
-    console.log(gameSize);
   }
 
   function onResize(event) {
@@ -70,9 +59,9 @@
   <edge class="lr rankPos" />
 </ranks>
 <chessfield style="width: {gameSize}px; height: {gameSize}px">
-  {#each rows as r}
+  {#each Array(8) as _, r}
     <row>
-      {#each cols as c}
+      {#each Array(8) as _, c}
         <Cell
           color={isLightSquare(r, c) ? "light" : "dark"}
           piece={{ props: { symbol: game[r][c] }, component: Piece }}

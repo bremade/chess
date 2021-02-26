@@ -1,12 +1,13 @@
 <script>
   import Chessfield from "./components/Chessfield.svelte";
   import Home from "./components/Home.svelte";
+  import chessStore from "./engine/chessstore.js";
 
-  var inProgress = false;
+  $: inProgress = $chessStore.inProgress;
 </script>
 
 {#if inProgress}
   <Chessfield />
 {:else}
-  <Home bind:value={inProgress} />
+  <Home />
 {/if}

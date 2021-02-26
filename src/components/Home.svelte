@@ -1,20 +1,32 @@
 <script>
-  import { log } from "console";
+  import chessStore from "../engine/chessstore.js";
 
-  export let value = false;
+  const startPosition =
+    "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+
+  let fen = "";
 </script>
 
-<div class="">
+<div class="init">
   <h1>Chess made with Svelte</h1>
   <button
     on:click={() => {
-      value = true;
+      chessStore.init(startPosition);
     }}>Start New Game</button
   >
+  <div class="fenStart">
+    <h2>Start with given FEN</h2>
+    <input id="fen" type="text" placeholder={startPosition} bind:value={fen} />
+    <button
+      on:click={() => {
+        chessStore.init(fen);
+      }}>Start From FEN</button
+    >
+  </div>
 </div>
 
 <style type="text/scss">
-  div {
+  div.init {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,14 +37,27 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    text-align: center;
     h1 {
       padding: 0 20px 0 20px;
     }
     button {
-      padding: 0 20px 0 20px;
-      margin: 0 0 10px 0;
+      padding: 5px;
       max-width: 10rem;
+      border: 1px black solid;
+      border-radius: 5px;
+    }
+    div.fenStart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      input {
+        width: 100%;
+      }
+      button {
+        margin: 10px 0;
+      }
     }
   }
 </style>

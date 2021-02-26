@@ -20,7 +20,7 @@ function initEmptyGame() {
   ];
 }
 
-function parseFen(fen) {
+export function parseFen(fen) {
   if (!isString(fen)) {
     //alert("Provided fen should be of type string.");
   }
@@ -67,7 +67,6 @@ export function fromFen(fen) {
   // TODO validate
   var game = initEmptyGame();
   var placements = tokens.placement;
-  console.log("test");
   var row = 0;
   var col = 0;
   for (var i = 0; i < placements.length; i++) {
@@ -76,7 +75,7 @@ export function fromFen(fen) {
       col = 0;
     } else if (isNumeric(placements[i])) {
       for (var j = 0; j < parseInt(placements[i]); j++) {
-        game[row][col] = "";
+        game[row][col] = null;
         col++;
       }
       var tmp = parseInt(placements[i]);
