@@ -36,6 +36,7 @@
 </div>
 
 <style type="text/scss">
+  @import "../styles/vars";
   div.init {
     display: flex;
     justify-content: center;
@@ -48,6 +49,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    font-family: $font-stack;
     h1 {
       padding: 0 20px 0 20px;
     }

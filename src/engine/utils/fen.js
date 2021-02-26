@@ -41,6 +41,9 @@ export function parseFen(fen) {
 export function fromStore(chessStore) {
   var fen = "";
   var boardArr = chessStore.board;
+  if (chessStore.board === undefined) {
+    return null;
+  }
   for (var row = 0; row < boardArr.length; row++) {
     var empty = 0;
     for (var col = 0; col < boardArr[row].length; col++) {

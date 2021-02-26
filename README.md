@@ -63,9 +63,9 @@ The following roadmap contains all the planned features:
   - [ ] Theme selection
   - [ ] Analysis tool to visualize future turns
   - [ ] Mirror board
-- [ ] FEN
+- [x] FEN
   - [x] Parse FEN
   - [x] Generate board from FEN
   - [x] Generate FEN from Board
-  - [ ] FEN validation
-  - [ ] FEN export
+  - [x] FEN validation
+  - [x] FEN export

@@ -1,9 +1,12 @@
 <script>
   import { onMount } from "svelte";
   import chessStore from "../engine/chessstore.js";
+  import { fromStore } from "../engine/utils/fen.js";
 
   import Cell from "./Cell.svelte";
   import Piece from "./Piece.svelte";
+  import Fab, { Icon } from "@smui/fab";
+  import { toast } from "@zerodevx/svelte-toast";
 
   $: game = $chessStore.board;
 
@@ -28,6 +31,19 @@
 
   function onResize(event) {
     getGameSize(event.target.innerWidth, event.target.innerHeight);
+  }
+
+  function exportFen() {
+    var fen = fromStore($chessStore);
+    var dummy = document.createElement("input");
+    document.body.appendChild(dummy);
+    dummy.setAttribute("id", "fenExport");
+    document.getElementById("fenExport").value = fen;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+
+    toast.push("FEN was copied to clipboard!");
   }
 </script>
 
@@ -70,6 +86,11 @@
     </row>
   {/each}
 </chessfield>
+<div class="fabPosition">
+  <Fab color="secondary" on:click={exportFen}>
+    <Icon class="material-icons">file_download</Icon>
+  </Fab>
+</div>
 
 <style type="text/scss">
   @import "../styles/vars";
@@ -93,12 +114,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: $font-stack;
     .rankPos {
       position: absolute;
       display: flex;
       font-size: 0.7rem;
       font-weight: 500;
-      font-family: $font-stack;
       background-color: $dark-color-alpha;
       color: $light-color;
       justify-content: center;
@@ -166,5 +187,11 @@
       top: 100%;
       left: 100%;
     }
+  }
+  .fabPosition {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 20px 20px 0;
   }
 </style>
