@@ -1,6 +1,9 @@
 /* eslint-disable */
+import validateFEN from "fen-validator";
+import { TypeException, ValidationException } from "../exceptions.js";
+
 function isString(string) {
-  return typeof string !== "string";
+  return typeof string === "string";
 }
 
 function isNumeric(string) {
@@ -22,7 +25,7 @@ function initEmptyGame() {
 
 export function parseFen(fen) {
   if (!isString(fen)) {
-    //alert("Provided fen should be of type string.");
+    throw new TypeException("Provided fen is not a string: " + fen);
   }
   const fields = fen.split(" ");
   return {
@@ -71,7 +74,9 @@ export function fromStore(chessStore) {
 
 export function fromFen(fen) {
   var tokens = parseFen(fen);
-  // TODO validate
+  if (!validateFEN(fen)) {
+    throw new ValidationException("Provided FEN is not valid! " + fen);
+  }
   var game = initEmptyGame();
   var placements = tokens.placement;
   var row = 0;

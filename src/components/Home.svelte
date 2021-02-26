@@ -11,7 +11,12 @@
   <h1>Chess made with Svelte</h1>
   <button
     on:click={() => {
-      chessStore.init(startPosition);
+      try {
+        chessStore.init(startPosition);
+      } catch (e) {
+        alert(e.message);
+        throw e;
+      }
     }}>Start New Game</button
   >
   <div class="fenStart">
@@ -19,7 +24,12 @@
     <input id="fen" type="text" placeholder={startPosition} bind:value={fen} />
     <button
       on:click={() => {
-        chessStore.init(fen);
+        try {
+          chessStore.init(fen);
+        } catch (e) {
+          alert(e.message);
+          throw e;
+        }
       }}>Start From FEN</button
     >
   </div>
