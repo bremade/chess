@@ -1,5 +1,6 @@
 <script>
-  import chessStore from "../engine/chessstore.js";
+  import { chessStore } from "../engine/chessstore.js";
+  import { toast } from "@zerodevx/svelte-toast";
 
   const startPosition =
     "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
@@ -14,7 +15,12 @@
       try {
         chessStore.init(startPosition);
       } catch (e) {
-        alert(e.message);
+        toast.push(e.message, {
+          theme: {
+            "--toastBackground": "#F56565",
+            "--toastProgressBackground": "#C53030",
+          },
+        });
         throw e;
       }
     }}>Start New Game</button
@@ -27,7 +33,12 @@
         try {
           chessStore.init(fen);
         } catch (e) {
-          alert(e.message);
+          toast.push(e.message, {
+            theme: {
+              "--toastBackground": "#F56565",
+              "--toastProgressBackground": "#C53030",
+            },
+          });
           throw e;
         }
       }}>Start From FEN</button

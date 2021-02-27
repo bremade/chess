@@ -1,0 +1,33 @@
+
+Todo:
+  ✔ Global store to track game state @critical
+  Chessfield:
+    ✔ Pieces @critical
+    ✔ Ranks @critical
+    ✔ Field @critical
+  Movement:
+    ✔ General movement @critical
+    ☐ Track turn count @low
+    ☐ Field restrictions @critical
+    ☐ Piece restrictions @critical
+      ☐ Rook
+      ☐ Knight
+      ☐ Bishop
+      ☐ Queen
+      ☐ King
+      ☐ Pond
+    ☐ Castling @critical
+    ☐ EnPassant @critical
+    ☐ Check @critical
+    ☐ Checkmate @critical
+  Visuals:
+    ☐ Highlight last turn @low
+    ☐ Theme selection @low
+    ☐ Analysis tool to visualize future turns @low
+    ☐ Mirror board @low
+  Fen:
+    ✔ Parse FEN @high
+    ✔ Generate FEN from Board @high
+    ✔ Generate board from FEN @high
+    ✔ FEN validation @low
+    ✔ FEN export @low

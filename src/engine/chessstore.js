@@ -1,27 +1,32 @@
-import { writable } from "svelte/store";
-import { parseFen, fromFen } from "./utils/fen";
+import { writable } from 'svelte/store';
+import { parseFen, fromFen } from './utils/fen';
 
-const chessStore = () => {
-  console.log("chessStore -> store()");
+function createChessStore() {
+  console.log('chessStore -> store()');
 
   const chessGame = {
     inProgress: false,
+    selected: undefined,
     board: undefined,
     turn: undefined,
     castling: undefined,
     enPassant: undefined,
     halfmove: undefined,
-    fullmove: undefined,
+    fullmove: undefined
   };
   const { subscribe, set, update } = writable(chessGame);
 
   const methods = {
     init(fen) {
-      console.log("chessStore -> init()");
-      var tokens = parseFen(fen);
+      console.log('chessStore -> init()');
+      const tokens = parseFen(fen);
 
       update((chessGame) => {
         (chessGame.inProgress = true), (chessGame.board = fromFen(fen));
+        chessGame.selected = {
+          row: undefined,
+          col: undefined
+        };
         chessGame.turn = tokens.active;
         chessGame.castling = tokens.castling;
         chessGame.enPassant = tokens.enPassant;
@@ -32,11 +37,15 @@ const chessStore = () => {
     },
 
     reset(fen) {
-      console.log("chessStore -> reset()");
-      var tokens = parseFen(fen);
+      console.log('chessStore -> reset()');
+      const tokens = parseFen(fen);
 
       update((chessGame) => {
         (chessGame.inProgress = true), (chessGame.board = fromFen(fen));
+        chessGame.selected = {
+          row: undefined,
+          col: undefined
+        };
         chessGame.turn = tokens.active;
         chessGame.castling = tokens.castling;
         chessGame.enPassant = tokens.enPassant;
@@ -46,8 +55,19 @@ const chessStore = () => {
       });
     },
 
+    setSelected(row, col) {
+      console.log('chessStore -> setSelected()');
+      update((chessGame) => {
+        chessGame.selected = {
+          row,
+          col
+        };
+        return chessGame;
+      });
+    },
+
     setBoard(board) {
-      console.log("chessStore -> setBoard()");
+      console.log('chessStore -> setBoard()');
       update((chessGame) => {
         chessGame.board = board;
         return chessGame;
@@ -55,7 +75,7 @@ const chessStore = () => {
     },
 
     setTurn(turn) {
-      console.log("chessStore -> setTurn()");
+      console.log('chessStore -> setTurn()');
       update((chessGame) => {
         chessGame.turn = turn;
         return chessGame;
@@ -63,16 +83,16 @@ const chessStore = () => {
     },
 
     toggleTurn() {
-      console.log("chessStore -> switchTurn()");
+      console.log('chessStore -> switchTurn()');
       update((chessGame) => {
-        var turn = chessGame.turn === "w" ? "s" : "w";
+        const turn = chessGame.turn === 'w' ? 'b' : 'w';
         chessGame.turn = turn;
         return chessGame;
       });
     },
 
     setCastling(castling) {
-      console.log("chessStore -> setCastling()");
+      console.log('chessStore -> setCastling()');
       update((chessGame) => {
         chessGame.castling = castling;
         return chessGame;
@@ -80,7 +100,7 @@ const chessStore = () => {
     },
 
     setEnPassant(enPassant) {
-      console.log("chessStore -> setEnPassant()");
+      console.log('chessStore -> setEnPassant()');
       update((chessGame) => {
         chessGame.enPassant = enPassant;
         return chessGame;
@@ -88,7 +108,7 @@ const chessStore = () => {
     },
 
     setHalfmove(halfmove) {
-      console.log("chessStore -> setHalfmove()");
+      console.log('chessStore -> setHalfmove()');
       update((chessGame) => {
         chessGame.halfmove = halfmove;
         return chessGame;
@@ -96,20 +116,20 @@ const chessStore = () => {
     },
 
     setFullmove(fullmove) {
-      console.log("chessStore -> setFullmove()");
+      console.log('chessStore -> setFullmove()');
       update((chessGame) => {
         chessGame.fullmove = fullmove;
         return chessGame;
       });
-    },
+    }
   };
 
   return {
     subscribe,
     set,
     update,
-    ...methods,
+    ...methods
   };
-};
+}
 
-export default chessStore();
+export const chessStore = createChessStore();

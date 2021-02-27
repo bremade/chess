@@ -45,7 +45,8 @@ The following roadmap contains all the planned features:
   - [x] Pieces
 - [x] Global store to track game state
 - [ ] Movement
-  - [ ] General movement
+  - [x] General movement
+  - [ ] Track turn count
   - [ ] Field restrictions
   - [ ] Piece restrictions
     - [ ] Rook

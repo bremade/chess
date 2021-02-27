@@ -1,11 +1,22 @@
 <script>
-  export let piece;
+  export let position;
+  export let color = isLightSquare(position.row, position.col)
+    ? "light"
+    : "dark";
   export let selected;
-  export let color;
+  export let piece;
+
+  function isLightSquare(row, col) {
+    return (row + col) % 2 === 0;
+  }
+
+  function isSelected(sel) {
+    return sel.row === position.row && sel.col === position.col;
+  }
 </script>
 
-<cell on:click class="{selected ? 'selected' : ''} {color}">
-  {#if piece.component != null}
+<cell on:click class="{isSelected(selected) ? 'hl-' + color : ''} {color}">
+  {#if piece.component != undefined}
     <svelte:component this={piece.component} {...piece.props} />
   {/if}
 </cell>
@@ -25,5 +36,11 @@
   }
   cell.dark {
     background-color: $dark-color;
+  }
+  cell.hl-light {
+    background-color: $hl-light-color;
+  }
+  cell.hl-dark {
+    background-color: $hl-dark-color;
   }
 </style>

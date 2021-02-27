@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
-  import chessStore from "../engine/chessstore.js";
+  import { chessStore } from "../engine/chessstore.js";
+  import { movePiece } from "../engine/chess.js";
   import { fromStore } from "../engine/utils/fen.js";
 
   import Cell from "./Cell.svelte";
@@ -9,6 +10,7 @@
   import { toast } from "@zerodevx/svelte-toast";
 
   $: game = $chessStore.board;
+  $: selected = $chessStore.selected;
 
   const ROW_LABELS = ["8", "7", "6", "5", "4", "3", "2", "1"];
   const COL_LABELS = ["A", "B", "C", "D", "E", "F", "G", "H"];
@@ -16,10 +18,6 @@
   let gameSize = 0;
 
   onMount(() => getGameSize(window.innerWidth, window.innerHeight));
-
-  function isLightSquare(x, y) {
-    return (x + y) % 2 === 0;
-  }
 
   function getGameSize(width, height) {
     if (width < height) {
@@ -43,7 +41,12 @@
     document.execCommand("copy");
     document.body.removeChild(dummy);
 
-    toast.push("FEN was copied to clipboard!");
+    toast.push("FEN was copied to clipboard!", {
+      theme: {
+        "--toastBackground": "#48bb78",
+        "--toastProgressBackground": "#2f855a",
+      },
+    });
   }
 </script>
 
@@ -79,8 +82,10 @@
     <row>
       {#each Array(8) as _, c}
         <Cell
-          color={isLightSquare(r, c) ? "light" : "dark"}
+          bind:selected
+          position={{ row: r, col: c }}
           piece={{ props: { symbol: game[r][c] }, component: Piece }}
+          on:click={() => movePiece(r, c, chessStore)}
         />
       {/each}
     </row>

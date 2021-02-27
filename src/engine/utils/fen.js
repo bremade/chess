@@ -12,14 +12,86 @@ function isNumeric(string) {
 
 function initEmptyGame() {
   return [
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
+    [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ],
+    [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ],
+    [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ],
+    [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ],
+    [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ],
+    [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ],
+    [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ],
+    [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ],
   ];
 }
 
@@ -42,12 +114,12 @@ export function fromStore(chessStore) {
   var fen = "";
   var boardArr = chessStore.board;
   if (chessStore.board === undefined) {
-    return null;
+    return undefined;
   }
   for (var row = 0; row < boardArr.length; row++) {
     var empty = 0;
     for (var col = 0; col < boardArr[row].length; col++) {
-      if (boardArr[row][col] === null) {
+      if (boardArr[row][col] === undefined) {
         empty++;
       } else {
         if (empty > 0) {
@@ -90,7 +162,7 @@ export function fromFen(fen) {
       col = 0;
     } else if (isNumeric(placements[i])) {
       for (var j = 0; j < parseInt(placements[i]); j++) {
-        game[row][col] = null;
+        game[row][col] = undefined;
         col++;
       }
     } else {

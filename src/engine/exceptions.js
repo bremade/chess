@@ -1,6 +1,6 @@
 export function TypeException(message) {
   this.message = message;
-  this.name = "TypeException";
+  this.name = 'TypeException';
 }
 
 TypeException.prototype.toString = function () {
@@ -9,9 +9,18 @@ TypeException.prototype.toString = function () {
 
 export function ValidationException(message) {
   this.message = message;
-  this.name = "ValidationException";
+  this.name = 'ValidationException';
 }
 
 ValidationException.prototype.toString = function () {
+  return `Exception - ${this.name}: "${this.message}"`;
+};
+
+export function ChessPieceException(message) {
+  this.message = message;
+  this.name = 'ChessPieceException';
+}
+
+ChessPieceException.prototype.toString = function () {
   return `Exception - ${this.name}: "${this.message}"`;
 };
